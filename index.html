@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capacity Connect - SIH 2026 (Hexa Brigades)</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e40af'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Clean, robust custom stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. SIH 2026 HEADER & TEAM BRANDING
+       ==================================================================== -->
+  <header class="sih-header no-print">
+    <div class="sih-header-content">
+      <div class="logo-block">
+        <div class="logo-badge">CC</div>
+        <div class="logo-text">
+          <h1>
+            CAPACITY CONNECT 
+            <span class="sih-tag">SIH 2026 | PS: SIH26075</span>
+          </h1>
+          <div class="logo-subtitle">
+            Digital Capacity Building &amp; LMS Portal | Theme: Smart Education | <strong>Team: Hexa Brigades</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Switch Persona / View -->
+        <div class="role-select-wrap">
+          <label for="role-select">Active View:</label>
+          <select id="role-select" class="role-select">
+            <option value="rahul">Rahul Sharma (Junior Engineer)</option>
+            <option value="priya">Priya Nair (Associate Data Analyst)</option>
+            <option value="manager">Vikram Malhotra (Team Lead / Manager)</option>
+          </select>
+        </div>
+
+        <button class="btn-demo-tour" onclick="startGuidedDemo()">
+          &#9654; Quick Demo
+        </button>
+
+        <button class="btn-reset" onclick="resetAllData()" title="Reset demo state back to default">
+          &#8634; Reset
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       2. THE CAPACITY CONNECT LOOP (SLIDE 2 METHODOLOGY)
+       ==================================================================== -->
+  <div class="loop-banner no-print">
+    <div class="loop-container">
+      <div class="loop-title-row">
+        <span class="loop-heading">The Continuous Learning Loop (From SIH Problem Statement)</span>
+        <span style="font-size: 11px; color: #64748b;">Click any phase to navigate</span>
+      </div>
+      <div class="loop-steps">
+        <div class="loop-step active" data-step="1" data-tab-target="dashboard">
+          <div class="step-num">1</div>
+          <div class="step-text">Skill Profile</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+
+        <div class="loop-step" data-step="2" data-tab-target="assessment">
+          <div class="step-num">2</div>
+          <div class="step-text">Skill Assessment</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+
+        <div class="loop-step" data-step="3" data-tab-target="gap-analysis">
+          <div class="step-num">3</div>
+          <div class="step-text">Skill Gap Analysis</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+
+        <div class="loop-step" data-step="4" data-tab-target="courses">
+          <div class="step-num">4</div>
+          <div class="step-text">Course Recommendation</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+
+        <div class="loop-step" data-step="5" data-tab-target="learning">
+          <div class="step-num">5</div>
+          <div class="step-text">Learning &amp; Quiz</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+
+        <div class="loop-step" data-step="6" data-tab-target="certificates">
+          <div class="step-num">6</div>
+          <div class="step-text">Certificate &amp; Competency Update</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       3. NAVIGATION TABS BAR
+       ==================================================================== -->
+  <nav class="nav-tabs-bar no-print">
+    <div class="nav-tabs-container">
+      <button class="nav-tab active" data-tab="dashboard">
+        Overview
+      </button>
+      <button class="nav-tab" data-tab="assessment">
+        Skill Assessment
+      </button>
+      <button class="nav-tab" data-tab="gap-analysis">
+        Gap Analysis
+      </button>
+      <button class="nav-tab" data-tab="roadmap">
+        ✨ Learning Roadmap
+      </button>
+      <button class="nav-tab" data-tab="courses">
+        AI Recommendations
+      </button>
+      <button class="nav-tab" data-tab="learning">
+        Course Player
+      </button>
+      <button class="nav-tab" data-tab="certificates">
+        Certificates
+      </button>
+      <button class="nav-tab" data-tab="hub">
+        Knowledge Hub
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====================================================================
+       4. MAIN TAB CONTENT MOUNTING PANELS
+       ==================================================================== -->
+  <main class="app-main">
+    <!-- Tab 1: Dashboard -->
+    <section id="tab-dashboard" class="tab-panel active"></section>
+
+    <!-- Tab 2: Skill Assessment Sliders -->
+    <section id="tab-assessment" class="tab-panel"></section>
+
+    <!-- Tab 3: Skill Gap Analysis Matrix -->
+    <section id="tab-gap-analysis" class="tab-panel"></section>
+
+    <!-- Tab 3.5: Custom Learning Roadmap -->
+    <section id="tab-roadmap" class="tab-panel"></section>
+
+    <!-- Tab 4: AI Course Recommendations -->
+    <section id="tab-courses" class="tab-panel"></section>
+
+    <!-- Tab 5: Course Learning & Quiz Player -->
+    <section id="tab-learning" class="tab-panel"></section>
+
+    <!-- Tab 6: Digital Certificate of Competency -->
+    <section id="tab-certificates" class="tab-panel"></section>
+
+    <!-- Tab 7: Manager / Team Matrix -->
+    <section id="tab-manager" class="tab-panel"></section>
+
+    <!-- Tab 8: Organizational Knowledge Hub -->
+    <section id="tab-hub" class="tab-panel"></section>
+  </main>
+
+  <!-- ====================================================================
+       5. INTERACTIVE ASSESSMENT QUIZ MODAL
+       ==================================================================== -->
+  <div id="quiz-modal" class="modal-overlay no-print">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="quiz-modal-title">Skill Assessment Quiz</h3>
+        <button class="btn-close" onclick="closeQuizModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="quiz-modal-body">
+        <!-- Dynamically rendered quiz questions -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-reset" style="color: #334155;" onclick="closeQuizModal()">Cancel</button>
+        <button class="btn-success" style="width: auto; padding: 10px 20px;" onclick="submitQuizAnswers()">
+          Submit Assessment Answers &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       6. INTERACTIVE ROADMAP QUESTIONNAIRE & CUSTOMIZER MODAL
+       ==================================================================== -->
+  <div id="roadmap-wizard-modal" class="modal-overlay no-print">
+    <div class="modal-card roadmap-modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="sih-tag" style="margin-bottom: 4px; display: inline-block;">AI Learning Pathway Architect</div>
+          <h3 id="roadmap-wizard-title">Customize Your Learning Roadmap</h3>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
+            Answer a few quick questions to generate an adaptive, milestone-based curriculum tailored to your goals.
+          </div>
+        </div>
+        <button class="btn-close" onclick="closeRoadmapWizard()">&times;</button>
+      </div>
+      
+      <!-- Stepper Indicator -->
+      <div class="wizard-stepper-bar">
+        <div class="wizard-step-pill active" id="step-pill-1">1. Target Role</div>
+        <div class="wizard-step-pill" id="step-pill-2">2. Experience Level</div>
+        <div class="wizard-step-pill" id="step-pill-3">3. Time &amp; Pace</div>
+        <div class="wizard-step-pill" id="step-pill-4">4. Learning Style</div>
+        <div class="wizard-step-pill" id="step-pill-5">5. Timeline</div>
+      </div>
+
+      <div class="modal-body" id="roadmap-wizard-body" style="padding: 24px;">
+        <!-- Dynamically rendered question step -->
+      </div>
+
+      <div class="modal-footer" id="roadmap-wizard-footer">
+        <button class="btn-reset" id="btn-wizard-prev" style="color: #334155; display: none;" onclick="prevRoadmapStep()">
+          &larr; Previous Question
+        </button>
+        <button class="btn-primary" id="btn-wizard-next" style="width: auto; padding: 10px 22px;" onclick="nextRoadmapStep()">
+          Next Question &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="app-toast" class="toast-msg"></div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
